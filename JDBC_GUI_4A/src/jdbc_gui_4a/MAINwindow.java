@@ -60,14 +60,26 @@ public class MAINwindow extends javax.swing.JFrame {
         pp = new javax.swing.JLabel();
         txtID = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
-        txtCountrycode = new javax.swing.JTextField();
-        txtDistrict = new javax.swing.JTextField();
-        txtPopulation = new javax.swing.JTextField();
+        txtJOB = new javax.swing.JTextField();
+        txtMGR = new javax.swing.JTextField();
+        txtHIREDATE = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtSAL = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtCOMM = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtDEPTNO = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,13 +113,13 @@ public class MAINwindow extends javax.swing.JFrame {
 
         aa.setText("ID:");
 
-        bb.setText("Name:");
+        bb.setText("ename:");
 
-        cc.setText("Countrycode:");
+        cc.setText("JOB");
 
-        dd.setText("District:");
+        dd.setText("MGR");
 
-        pp.setText("Population:");
+        pp.setText("HIREDATE:");
 
         txtID.setEditable(false);
         txtID.addActionListener(new java.awt.event.ActionListener() {
@@ -122,13 +134,13 @@ public class MAINwindow extends javax.swing.JFrame {
             }
         });
 
-        txtDistrict.addActionListener(new java.awt.event.ActionListener() {
+        txtMGR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDistrictActionPerformed(evt);
+                txtMGRActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Add city");
+        jButton1.setText("Add employer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -158,6 +170,32 @@ public class MAINwindow extends javax.swing.JFrame {
 
         jLabel6.setText("Custom SQL Statement for Select");
 
+        jLabel1.setText("SAL:");
+
+        txtSAL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSALActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("COMM:");
+
+        txtCOMM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCOMMActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("DEPTNO:");
+
+        jLabel4.setText("User:");
+
+        jLabel5.setText("jLabel5");
+
+        jTextField7.setText("jTextField7");
+
+        jLabel7.setText("Database:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -168,9 +206,23 @@ public class MAINwindow extends javax.swing.JFrame {
                     .addComponent(Port))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                     .addComponent(jTextField2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Disconnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Connect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -184,32 +236,41 @@ public class MAINwindow extends javax.swing.JFrame {
                     .addComponent(bb)
                     .addComponent(aa))
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtID, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(txtMGR)
+                    .addComponent(txtHIREDATE)
+                    .addComponent(txtJOB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(txtName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtDistrict)
-                        .addComponent(txtPopulation)
-                        .addComponent(txtCountrycode, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)
-                                .addContainerGap())
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton4)
-                                .addGap(27, 27, 27))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton4)
+                        .addGap(33, 33, 33))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(jLabel6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtCOMM, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSAL, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDEPTNO, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -218,37 +279,59 @@ public class MAINwindow extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Server)
                     .addComponent(Connect)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Port)
                     .addComponent(Disconnect)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aa)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bb)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(aa)
+                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(bb)
+                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jButton1)))
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cc)
-                    .addComponent(txtCountrycode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtJOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dd)
-                    .addComponent(txtDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMGR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pp)
-                    .addComponent(txtPopulation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHIREDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtSAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtCOMM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtDEPTNO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addContainerGap())
         );
@@ -261,7 +344,7 @@ public class MAINwindow extends javax.swing.JFrame {
         
        
         try{
-              con= DriverManager.getConnection("jdbc:mysql://localhost/world", "root", "");
+              con= DriverManager.getConnection("jdbc:mysql://localhost/scott", "root", "");
               Connect.setEnabled(false);
               Disconnect.setEnabled(true);
               jTextField1.setEnabled(false);
@@ -272,28 +355,34 @@ public class MAINwindow extends javax.swing.JFrame {
                }
         
         try{
-             stmt_selectAll = con.prepareStatement("SELECT * FROM city");
+             stmt_selectAll = con.prepareStatement("SELECT * FROM EMP");
              res_selectALL=stmt_selectAll.executeQuery();
              if(res_selectALL.next()){
-                 int id = res_selectALL.getInt("ID");
-                 String name = res_selectALL.getString("Name");
-                 String cc = res_selectALL.getString("CountryCode");
-                 String district = res_selectALL.getString("District");
-                 int population = res_selectALL.getInt("Population");
+                 int id = res_selectALL.getInt("EMPNO");
+                 String ename = res_selectALL.getString("Ename");
+                 String JOB = res_selectALL.getString("JOB");
+                 int MGR = res_selectALL.getInt("MGR");
+                 String HIREDATE = res_selectALL.getString("HIREDATE");
+                 double SAL = res_selectALL.getInt("SAL");
+                 double COMM = res_selectALL.getInt("COMM");
+                 int DEPTNO = res_selectALL.getInt("DEPTNO");
                  
                  txtID.setText(""+id);
-                 txtName.setText(name);
-                 txtCountrycode.setText(cc);
-                 txtDistrict.setText(district);
-                 txtPopulation.setText(""+population);
-                 
-             }
+                 txtName.setText(ename);
+                 txtJOB.setText(JOB);
+                 txtMGR.setText(""+MGR);
+                 txtHIREDATE.setText(HIREDATE);
+                 txtSAL.setText(""+SAL);
+                 txtCOMM.setText(""+COMM);
+                 txtDEPTNO.setText(""+DEPTNO);
+                
+             } 
              
              stmt_add = con.prepareStatement(
-                    "INSERT INTO city(name,countrycode,district,population) values(?,?,?,?)"
+                    "INSERT INTO EMP(ename,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) values(?,?,?,?,?,?,?)"
         );
          }catch(SQLException ex){
-             
+             System.out.println("error connecting");
          }
         
     }//GEN-LAST:event_ConnectActionPerformed
@@ -324,25 +413,31 @@ public class MAINwindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
 
-    private void txtDistrictActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDistrictActionPerformed
+    private void txtMGRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMGRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDistrictActionPerformed
+    }//GEN-LAST:event_txtMGRActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
                  if(res_selectALL.next()){
-                 int id = res_selectALL.getInt("ID");
-                 String name = res_selectALL.getString("Name");
-                 String cc = res_selectALL.getString("CountryCode");
-                 String district = res_selectALL.getString("District");
-                 int population = res_selectALL.getInt("Population");
+                 int id = res_selectALL.getInt("EMPNO");
+                 String ename = res_selectALL.getString("Ename");
+                 String JOB = res_selectALL.getString("JOB");
+                 int MGR = res_selectALL.getInt("MGR");
+                 String HIREDATE = res_selectALL.getString("HIREDATE");
+                 double SAL = res_selectALL.getInt("SAL");
+                 double COMM = res_selectALL.getInt("COMM");
+                 int DEPTNO = res_selectALL.getInt("DEPTNO");
                  
                  txtID.setText(""+id);
-                 txtName.setText(name);
-                 txtCountrycode.setText(cc);
-                 txtDistrict.setText(district);
-                 txtPopulation.setText(""+population);
+                 txtName.setText(ename);
+                 txtJOB.setText(JOB);
+                 txtMGR.setText(""+MGR);
+                 txtHIREDATE.setText(HIREDATE);
+                 txtSAL.setText(""+SAL);
+                 txtCOMM.setText(""+COMM);
+                 txtDEPTNO.setText(""+DEPTNO);
                  
              }else{
                      res_selectALL.beforeFirst();
@@ -358,17 +453,23 @@ public class MAINwindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
                  if(res_selectALL.previous()){
-                 int id = res_selectALL.getInt("ID");
-                 String name = res_selectALL.getString("Name");
-                 String cc = res_selectALL.getString("CountryCode");
-                 String district = res_selectALL.getString("District");
-                 int population = res_selectALL.getInt("Population");
+                 int id = res_selectALL.getInt("EMPNO");
+                 String ename = res_selectALL.getString("Ename");
+                 String JOB = res_selectALL.getString("JOB");
+                 int MGR = res_selectALL.getInt("MGR");
+                 String HIREDATE = res_selectALL.getString("HIREDATE");
+                 double SAL = res_selectALL.getInt("SAL");
+                 double COMM = res_selectALL.getInt("COMM");
+                 int DEPTNO = res_selectALL.getInt("DEPTNO");
                  
                  txtID.setText(""+id);
-                 txtName.setText(name);
-                 txtCountrycode.setText(cc);
-                 txtDistrict.setText(district);
-                 txtPopulation.setText(""+population);
+                 txtName.setText(ename);
+                 txtJOB.setText(JOB);
+                 txtMGR.setText(""+MGR);
+                 txtHIREDATE.setText(HIREDATE);
+                 txtSAL.setText(""+SAL);
+                 txtCOMM.setText(""+COMM);
+                 txtDEPTNO.setText(""+DEPTNO);
                  
              }else{
                      res_selectALL.afterLast();
@@ -386,9 +487,9 @@ public class MAINwindow extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try{
         stmt_add.setString(1, txtName.getText());
-        stmt_add.setString(2,txtCountrycode.getText());
-        stmt_add.setString(3, txtDistrict.getText());
-        int population = Integer.parseInt(txtPopulation.getText());
+        stmt_add.setString(2,txtJOB.getText());
+        stmt_add.setString(3, txtMGR.getText());
+        int population = Integer.parseInt(txtHIREDATE.getText());
         stmt_add.setInt(4, population);
         
         int rows_changed = stmt_add.executeUpdate();
@@ -410,6 +511,14 @@ public class MAINwindow extends javax.swing.JFrame {
         //Statement ausfuehren
         //Fehlermeldung, wenn es kein Add gegeben hat.
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtSALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSALActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSALActionPerformed
+
+    private void txtCOMMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCOMMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCOMMActionPerformed
 
     /**
      * @param args the command line arguments
@@ -459,14 +568,26 @@ public class MAINwindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JLabel pp;
-    private javax.swing.JTextField txtCountrycode;
-    private javax.swing.JTextField txtDistrict;
+    private javax.swing.JTextField txtCOMM;
+    private javax.swing.JTextField txtDEPTNO;
+    private javax.swing.JTextField txtHIREDATE;
     private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtJOB;
+    private javax.swing.JTextField txtMGR;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPopulation;
+    private javax.swing.JTextField txtSAL;
     // End of variables declaration//GEN-END:variables
 }
